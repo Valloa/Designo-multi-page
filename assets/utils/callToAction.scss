@@ -1,0 +1,40 @@
+@import '../mixin/mediaqueries';
+
+%CallToAction {
+  display: grid;
+  place-content: center;
+  min-inline-size: 9rem;
+  padding-block: 1em;
+  padding-inline: 1.5em;
+
+  color: var(--color, var(--black));
+  font: var(--fweight-medium) 1em/1.1 var(--main-font);
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  background: var(--background, var(--white));
+  border: none;
+  border-radius: .5em;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+
+  transition: all .3s ease;
+
+  &:hover,
+  &:focus {
+    color: var(--white);
+    background: var(--peach-light);
+  }
+
+  &:disabled {
+    cursor: unset;
+    opacity: .5;
+  }
+
+  &--onLight {
+    --color: var(--white);
+    --background: var(--peach);
+  }
+}

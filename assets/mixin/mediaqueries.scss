@@ -1,0 +1,37 @@
+//$sm: 31;
+//$md: 48;
+$phone: 27;
+$tablet: 89.9;
+//$media1920: 120;
+
+//$navigationSwitch: 70;
+
+@mixin mediaPhone {
+  @media screen and (min-width: #{$phone}em) {
+    @content;
+  }
+}
+
+@mixin mediaTablet {
+  @media screen and (min-width: #{$tablet}em) {
+    @content;
+  }
+}
+
+//@mixin mediaXxl {
+//  @media screen and (min-width: #{$xxl}em) {
+//    @content;
+//  }
+//}
+//
+//@mixin media1920 {
+//  @media screen and (min-width: #{$media1920}em) {
+//    @content;
+//  }
+//}
+
+//@mixin navigationSwitch {
+//  @media screen and (min-width: #{$navigationSwitch}em) {
+//    @content;
+//  }
+//}

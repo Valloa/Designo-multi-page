@@ -1,0 +1,116 @@
+@import "utils/callToAction";
+@import "utils/noBulletList";
+@import "utils/readerOnly";
+@import "header";
+@import "footer";
+
+:root {
+  --peach: hsl(11, 73%, 66%);
+  --black: hsl(270, 3%, 11%);
+  --white: hsl(0, 0%, 100%);
+  --peach-light: hsl(11, 100%, 80%);
+  --dark-grey: hsl(264, 5%, 20%);
+  --light-grey: hsl(210, 17%, 95%);
+
+  --fweight-thin: 100;
+  --fweight-extra-light: 200;
+  --fweight-light: 300;
+  --fweight-regular: 400;
+  --fweight-medium: 500;
+  --fweight-semi-bold: 600;
+  --fweight-bold: 700;
+  --fweight-extra-bold: 800;
+  --fweight-black: 900;
+
+  --main-font: 'Jost', sans-serif;
+
+  color: var(--black);
+  font-family: var(--main-font);
+
+  font: var(--fweight-medium) 1rem/1.625 var(--main-font);
+
+  --title-1: var(--fweight-medium) 2rem/1 var(--main-font);
+  --title-2: var(--fweight-medium) 1.75rem/1.2 var(--main-font);
+  --title-3: var(--fweight-medium) 1rem/1.3 var(--main-font);
+
+  //@include mediaTablet {
+  //  --title-1: var(--fweight-medium) 3rem/1 var(--main-font);
+  //  --title-2: var(--fweight-medium) 2.5rem/1.2 var(--main-font);
+  //  --title-3: var(--fweight-medium) 1.25rem/1.3 var(--main-font);
+  //}
+
+  @include mediaTablet {
+    --title-1: var(--fweight-medium) 3rem/1 var(--main-font);
+    --title-2: var(--fweight-medium) 2.5rem/1.2 var(--main-font);
+    --title-3: var(--fweight-medium) 1.25rem/1.3 var(--main-font);
+  }
+
+  --colWidth: 69.5rem;
+
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-block-size: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.title-1 {
+  font: var(--title-1);
+}
+
+.title-2 {
+  font: var(--title-2);
+  letter-spacing: .05em;
+}
+
+.title-3 {
+  font: var(--title-3);
+}
+
+svg,
+img,
+picture {
+  display: block;
+  max-inline-size: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0s !important;
+    animation: none !important;
+  }
+}
+
+.ReaderOnly {
+  @extend %readerOnly;
+}
+
+.CallToAction {
+  @extend %CallToAction;
+
+  &--onLight {
+    @extend %CallToAction--onLight;
+  }
+}
+
+.NoBulletList {
+  @extend %NoBulletList;
+}
+
+.Error {
+  margin-block: .5em;
+  padding: .5em;
+  color: var(--error);
+  font-size: .875rem;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: .25rem;
+}

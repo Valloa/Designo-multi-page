@@ -1,0 +1,223 @@
+main {
+  max-inline-size: var(--colWidth);
+  margin-inline: auto; }
+  @media screen and (min-width: 27em) {
+    main {
+      padding-inline: 1.5rem; } }
+  @media screen and (min-width: 89.9em) {
+    main {
+      padding-inline: 2.5rem; } }
+
+.IndexHeader {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 100%;
+  align-content: center;
+  gap: 1rem;
+  place-items: center;
+  padding-block: 5rem 22rem;
+  padding-inline: 1.5rem;
+  color: white;
+  text-align: center;
+  background: url("home/desktop/bg-pattern-hero-home.svg") no-repeat center left/auto 75%;
+  background-color: var(--peach);
+  overflow: hidden; }
+  @media screen and (min-width: 27em) {
+    .IndexHeader {
+      padding-inline-start: 3.75rem;
+      padding-inline: 3.75rem;
+      background-position: top right;
+      background-size: auto 100%;
+      border-radius: 1rem; } }
+  @media screen and (min-width: 89.9em) {
+    .IndexHeader {
+      justify-items: start;
+      padding-block: 9rem;
+      padding-inline: 6rem;
+      gap: 2.5rem;
+      text-align: start; } }
+  .IndexHeader::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%);
+    display: block;
+    width: 30rem;
+    height: 27rem;
+    background: url("home/desktop/image-hero-phone.png") no-repeat center top/100%;
+    content: ''; }
+    @media screen and (min-width: 89.9em) {
+      .IndexHeader::after {
+        top: calc(50%);
+        left: 100%;
+        bottom: auto;
+        transform: translate(-100%, -50%);
+        width: 25rem;
+        height: 100%;
+        background-position: center top;
+        background-size: auto 130%; } }
+  .IndexHeader__title {
+    max-inline-size: 33.5rem;
+    margin: 0; }
+  .IndexHeader__text {
+    max-inline-size: 28rem;
+    margin: 0; }
+
+.IndexSkills {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-auto-rows: 15.5rem;
+  gap: 1.5rem 2rem;
+  margin-block: 10rem 0; }
+  @media screen and (min-width: 27em) {
+    .IndexSkills {
+      grid-auto-rows: 12.5rem; } }
+  @media screen and (min-width: 89.9em) {
+    .IndexSkills {
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: 19.25rem;
+      padding: 0; } }
+  .IndexSkills__item {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    gap: 1.5rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    background: no-repeat center/cover;
+    border-radius: 1rem;
+    overflow: hidden; }
+    .IndexSkills__item:first-of-type {
+      background-image: url("home/desktop/image-web-design-large.jpg"); }
+      @media screen and (min-width: 89.9em) {
+        .IndexSkills__item:first-of-type {
+          grid-row: span 2; } }
+    .IndexSkills__item:nth-of-type(2) {
+      background-image: url("home/desktop/image-app-design.jpg"); }
+    .IndexSkills__item:nth-of-type(3) {
+      background-image: url("home/desktop/image-graphic-design.jpg"); }
+    .IndexSkills__item::before {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: var(--peach);
+      opacity: 0;
+      content: '';
+      transition: all .3s; }
+    .IndexSkills__item:hover::before, .IndexSkills__item:focus-within::before {
+      opacity: .5; }
+  .IndexSkills__title {
+    margin: 0; }
+  .IndexSkills__link {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1rem;
+    font-weight: var(--fweight-medium);
+    letter-spacing: .3em; }
+    .IndexSkills__link::before {
+      position: absolute;
+      inset: 0;
+      content: ''; }
+
+.IndexBehave {
+  display: grid;
+  justify-content: center;
+  gap: 2rem;
+  margin-block: 10rem 0;
+  padding-inline: 1.5rem;
+  text-align: center; }
+  @media screen and (min-width: 27em) {
+    .IndexBehave {
+      padding: 0;
+      text-align: start; } }
+  @media screen and (min-width: 89.9em) {
+    .IndexBehave {
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center; } }
+  .IndexBehave__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    @media screen and (min-width: 27em) {
+      .IndexBehave__item {
+        display: grid;
+        grid-template: 'media .' 1fr 'media title' min-content 'media text' min-content 'media .' 1fr / auto 1fr;
+        gap: 1rem 3rem; } }
+    @media screen and (min-width: 89.9em) {
+      .IndexBehave__item {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        align-items: center; } }
+    .IndexBehave__item div {
+      position: relative;
+      display: block;
+      grid-area: media;
+      inline-size: 12.75rem;
+      aspect-ratio: 1;
+      background: no-repeat center/contain; }
+      .IndexBehave__item div::before {
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+        display: block;
+        background: url("home/desktop/bg-pattern-hero-home.svg") no-repeat center/contain;
+        content: '';
+        opacity: .6; }
+    .IndexBehave__item:nth-of-type(1) div {
+      background-image: url("home/desktop/illustration-passionate.svg"); }
+      .IndexBehave__item:nth-of-type(1) div::before {
+        transform: rotateZ(-0.25turn); }
+    .IndexBehave__item:nth-of-type(2) div {
+      background-image: url("home/desktop/illustration-resourceful.svg"); }
+      .IndexBehave__item:nth-of-type(2) div::before {
+        transform: rotateZ(-0.5turn); }
+    .IndexBehave__item:nth-of-type(3) div {
+      background-image: url("home/desktop/illustration-friendly.svg"); }
+  .IndexBehave__title {
+    position: relative;
+    grid-area: title;
+    margin-block: 2.4em 2rem;
+    text-transform: uppercase; }
+    @media screen and (min-width: 27em) {
+      .IndexBehave__title {
+        margin-block: 0; } }
+    @media screen and (min-width: 89.9em) {
+      .IndexBehave__title {
+        margin-block: unset; } }
+  .IndexBehave__text {
+    grid-area: text;
+    margin: 0; }
+
+.IndexContact {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template: 'title link' auto 'text link' auto / 1fr auto;
+  align-content: center;
+  gap: 1.5rem;
+  margin-block: 10rem 0;
+  padding-block: 4.5rem;
+  padding-inline: 6rem;
+  color: var(--white);
+  background: var(--peach) url("shared/desktop/bg-pattern-call-to-action.svg") no-repeat right center/auto 150%;
+  border-radius: 1rem; }
+  .IndexContact__title {
+    grid-area: title;
+    max-inline-size: 20rem;
+    margin: 0; }
+  .IndexContact__text {
+    grid-area: text;
+    max-inline-size: 28.75rem;
+    margin: 0; }
+  .IndexContact__link {
+    grid-area: link;
+    place-self: center;
+    padding-inline: 1em; }
+
+/*# sourceMappingURL=index.css.map */

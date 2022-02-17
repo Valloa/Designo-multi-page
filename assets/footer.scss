@@ -1,0 +1,39 @@
+.Footer {
+  display: grid;
+  grid-template-columns: min(100%, var(--colWidth));
+  justify-content: center;
+  margin-block: -4.5rem 0;
+  padding-block: 9rem 4.5rem;
+  padding-inline: 2rem;
+  color: white;
+  background: var(--black);
+
+  .Nav {
+    padding-block: 0 2.25rem;
+    margin-block: 0 2.25rem;
+    border-block-end: 1px solid rgba(white, .1);
+  }
+
+  .Logo {
+    background-image: url('shared/desktop/logo-light.png');
+  }
+
+  address {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 22rem);
+    justify-content: space-between;
+    gap: 1.5rem;
+    max-inline-size: 50rem;
+    font-style: normal;
+    opacity: .5;
+    font-weight: var(--fweight-bold);
+
+    span:first-of-type {
+      font-weight: var(--fweight-regular);
+
+      &:first-line {
+        font-weight: var(--fweight-bold);
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+%NoBulletList {
+  list-style-type: none;
+
+  > li::before {
+    position: absolute;
+    display: block;
+    height: 0;
+
+    content: '\200B';
+  }
+}
