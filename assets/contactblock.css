@@ -1,0 +1,45 @@
+.ContactBlock {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template: 'title' auto 'text' auto 'link' auto / 100%;
+  place-items: center;
+  gap: 1.5rem;
+  margin-block: 10rem 0;
+  margin-inline: 1.5rem;
+  padding-block: 4rem;
+  padding-inline: 1.5rem;
+  color: var(--white);
+  background: var(--peach) url("shared/desktop/bg-pattern-call-to-action.svg") no-repeat right center/auto 150%;
+  border-radius: 1rem; }
+  @media screen and (min-width: 27em) {
+    .ContactBlock {
+      margin-inline: 0;
+      padding-inline: 2.5rem; } }
+  @media screen and (min-width: 89.9em) {
+    .ContactBlock {
+      grid-template: 'title link' auto 'text link' auto / 1fr auto;
+      padding-block: 4.5rem;
+      padding-inline: 6rem; } }
+  .ContactBlock__title {
+    grid-area: title;
+    max-inline-size: 20rem;
+    margin: 0;
+    text-align: center; }
+    @media screen and (min-width: 89.9em) {
+      .ContactBlock__title {
+        text-align: unset; } }
+  .ContactBlock__text {
+    grid-area: text;
+    max-inline-size: 28.75rem;
+    margin: 0;
+    text-align: center; }
+    @media screen and (min-width: 89.9em) {
+      .ContactBlock__text {
+        text-align: unset; } }
+  .ContactBlock__link {
+    grid-area: link;
+    place-self: center;
+    padding-inline: 1em; }
+
+/*# sourceMappingURL=contactblock.css.map */

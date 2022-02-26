@@ -1,0 +1,165 @@
+@import "mixin/mediaqueries";
+
+main {
+  inline-size: 100%;
+  max-inline-size: var(--colWidth);
+  margin-inline: auto;
+
+  @include mediaPhone {
+    padding-inline: 1.5rem;
+  }
+
+  @include mediaTablet {
+    padding-inline: 2.5rem;
+  }
+}
+
+.SkillPage {
+  display: grid;
+  gap: 10rem;
+
+  &--web {
+    .web {
+      display: none;
+    }
+  }
+
+  &--app {
+    .app {
+      display: none;
+    }
+  }
+
+  &--graphic {
+    .graphic {
+      display: none;
+    }
+  }
+
+  &__header {
+    display: grid;
+    place-items: center;
+    gap: 1.5rem;
+    padding-block: 4rem;
+    padding-inline: 1.5rem;
+    color: white;
+    text-align: center;
+    background: var(--peach) url('shared/desktop/bg-pattern-call-to-action.svg') no-repeat right center / 50rem auto;
+    border-radius: 1rem;
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__description {
+    max-inline-size: 25rem;
+    margin: 0;
+  }
+
+  &Projects {
+    display: grid;
+    gap: 2rem 1.875rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  }
+
+  &ProjectCard {
+    background: #FDF3F0;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    &__content {
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    &__name {
+      margin: 0;
+      color: var(--peach);
+      font-weight: var(--fweight-regular);
+    }
+
+    &__description {
+      margin: 0;
+    }
+  }
+
+  &Skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
+    gap: 1.875rem;
+    grid-auto-rows: 15.5rem;
+
+    @include mediaPhone {
+      grid-auto-rows: 12.5rem;
+    }
+
+    @include mediaTablet {
+      grid-auto-rows: 19.25rem;
+    }
+  }
+
+  &OtherSkill {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    gap: 1.5rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    background: no-repeat center/cover;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    &.web {
+      background-image: url('home/desktop/image-web-design-large.jpg');
+    }
+
+    &.app {
+      background-image: url('home/desktop/image-app-design.jpg');
+    }
+
+    &.graphic {
+      background-image: url('home/desktop/image-graphic-design.jpg');
+    }
+
+    &::before {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: var(--peach);
+      opacity: 0;
+      content: '';
+      transition: all .3s;
+    }
+
+    &:hover,
+    &:focus-within {
+      &::before {
+        opacity: .5;
+      }
+    }
+
+    &__title {
+      margin: 0;
+    }
+
+    &__link {
+      text-decoration: none;
+      color: inherit;
+      font-size: 1rem;
+      font-weight: var(--fweight-medium);
+      letter-spacing: .3em;
+
+      &::before {
+        position: absolute;
+        inset: 0;
+        content: '';
+      }
+    }
+  }
+}

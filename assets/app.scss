@@ -3,10 +3,17 @@
 @import "utils/readerOnly";
 @import "header";
 @import "footer";
+@import "contactblock";
 
 //* {
 //  border: 1px solid deeppink;
 //}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 :root {
   --peach: hsl(11, 73%, 66%);
@@ -55,8 +62,8 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: minmax(0, 100%);
   min-block-size: 100vh;
 }
 

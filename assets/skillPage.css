@@ -1,0 +1,108 @@
+main {
+  inline-size: 100%;
+  max-inline-size: var(--colWidth);
+  margin-inline: auto; }
+  @media screen and (min-width: 27em) {
+    main {
+      padding-inline: 1.5rem; } }
+  @media screen and (min-width: 89.9em) {
+    main {
+      padding-inline: 2.5rem; } }
+
+.SkillPage {
+  display: grid;
+  gap: 10rem; }
+  .SkillPage--web .web {
+    display: none; }
+  .SkillPage--app .app {
+    display: none; }
+  .SkillPage--graphic .graphic {
+    display: none; }
+  .SkillPage__header {
+    display: grid;
+    place-items: center;
+    gap: 1.5rem;
+    padding-block: 4rem;
+    padding-inline: 1.5rem;
+    color: white;
+    text-align: center;
+    background: var(--peach) url("shared/desktop/bg-pattern-call-to-action.svg") no-repeat right center/50rem auto;
+    border-radius: 1rem; }
+  .SkillPage__title {
+    margin: 0; }
+  .SkillPage__description {
+    max-inline-size: 25rem;
+    margin: 0; }
+  .SkillPageProjects {
+    display: grid;
+    gap: 2rem 1.875rem;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); }
+  .SkillPageProjectCard {
+    background: #FDF3F0;
+    border-radius: 1rem;
+    overflow: hidden; }
+    .SkillPageProjectCard__content {
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+      text-align: center; }
+    .SkillPageProjectCard__name {
+      margin: 0;
+      color: var(--peach);
+      font-weight: var(--fweight-regular); }
+    .SkillPageProjectCard__description {
+      margin: 0; }
+  .SkillPageSkills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
+    gap: 1.875rem;
+    grid-auto-rows: 15.5rem; }
+    @media screen and (min-width: 27em) {
+      .SkillPageSkills {
+        grid-auto-rows: 12.5rem; } }
+    @media screen and (min-width: 89.9em) {
+      .SkillPageSkills {
+        grid-auto-rows: 19.25rem; } }
+  .SkillPageOtherSkill {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    gap: 1.5rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    background: no-repeat center/cover;
+    border-radius: 1rem;
+    overflow: hidden; }
+    .SkillPageOtherSkill.web {
+      background-image: url("home/desktop/image-web-design-large.jpg"); }
+    .SkillPageOtherSkill.app {
+      background-image: url("home/desktop/image-app-design.jpg"); }
+    .SkillPageOtherSkill.graphic {
+      background-image: url("home/desktop/image-graphic-design.jpg"); }
+    .SkillPageOtherSkill::before {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: var(--peach);
+      opacity: 0;
+      content: '';
+      transition: all .3s; }
+    .SkillPageOtherSkill:hover::before, .SkillPageOtherSkill:focus-within::before {
+      opacity: .5; }
+    .SkillPageOtherSkill__title {
+      margin: 0; }
+    .SkillPageOtherSkill__link {
+      text-decoration: none;
+      color: inherit;
+      font-size: 1rem;
+      font-weight: var(--fweight-medium);
+      letter-spacing: .3em; }
+      .SkillPageOtherSkill__link::before {
+        position: absolute;
+        inset: 0;
+        content: ''; }
+
+/*# sourceMappingURL=skillPage.css.map */
