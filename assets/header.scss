@@ -1,8 +1,33 @@
+@import "mixin/mediaqueries";
+
 .Header {
   padding-inline: 2rem;
 
   .Nav {
     block-size: 9.75rem;
+
+    ul {
+      display: none;
+
+      @include mediaTablet {
+        display: grid;
+      }
+    }
+  }
+}
+
+.Footer .Nav {
+
+  ul {
+    grid-auto-flow: row;
+    grid-template-columns: auto;
+    place-items: center;
+
+    @include mediaTablet {
+      grid-auto-flow: column;
+      grid-template-columns: 1fr auto auto auto;
+      place-items: unset;
+    }
   }
 }
 

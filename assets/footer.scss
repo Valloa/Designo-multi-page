@@ -1,3 +1,5 @@
+@import "mixin/mediaqueries";
+
 .Footer {
   display: grid;
   grid-template-columns: min(100%, var(--colWidth));
@@ -20,13 +22,19 @@
 
   address {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 22rem);
+    grid-template-columns: 100%;
     justify-content: space-between;
     gap: 1.5rem;
-    max-inline-size: 50rem;
     font-style: normal;
     opacity: .5;
     font-weight: var(--fweight-bold);
+    text-align: center;
+
+    @include mediaTablet {
+      grid-template-columns: repeat(auto-fit, 22rem);
+      max-inline-size: 50rem;
+      text-align: unset;
+    }
 
     span:first-of-type {
       font-weight: var(--fweight-regular);

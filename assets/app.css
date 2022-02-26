@@ -47,6 +47,21 @@
   padding-inline: 2rem; }
   .Header .Nav {
     block-size: 9.75rem; }
+    .Header .Nav ul {
+      display: none; }
+      @media screen and (min-width: 89.9em) {
+        .Header .Nav ul {
+          display: grid; } }
+
+.Footer .Nav ul {
+  grid-auto-flow: row;
+  grid-template-columns: auto;
+  place-items: center; }
+  @media screen and (min-width: 89.9em) {
+    .Footer .Nav ul {
+      grid-auto-flow: column;
+      grid-template-columns: 1fr auto auto auto;
+      place-items: unset; } }
 
 .Nav {
   display: grid;
@@ -91,13 +106,18 @@
     background-image: url("shared/desktop/logo-light.png"); }
   .Footer address {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 22rem);
+    grid-template-columns: 100%;
     justify-content: space-between;
     gap: 1.5rem;
-    max-inline-size: 50rem;
     font-style: normal;
     opacity: .5;
-    font-weight: var(--fweight-bold); }
+    font-weight: var(--fweight-bold);
+    text-align: center; }
+    @media screen and (min-width: 89.9em) {
+      .Footer address {
+        grid-template-columns: repeat(auto-fit, 22rem);
+        max-inline-size: 50rem;
+        text-align: unset; } }
     .Footer address span:first-of-type {
       font-weight: var(--fweight-regular); }
       .Footer address span:first-of-type:first-line {
