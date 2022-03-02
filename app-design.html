@@ -5,53 +5,142 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="./assets/app.css">
+  <link rel="stylesheet" href="./assets/skillPage.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@100..900&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Designo Agency Website Challenge</title>
 </head>
 <body>
-  Our Company
-  Locations
-  Contact
 
-  App design
-  Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.
+<header class="Header">
+  <nav aria-label="main" class="Nav">
+    <ul class="NoBulletList">
+      <li>
+        <a href="/index.html" class="Logo">
+          <span class="ReaderOnly">Designo</span>
+        </a>
+      </li>
 
-  Airfilter
-  Solving the problem of poor indoor air quality by filtering the air
+      <li><a href="/about.html">Our Company</a></li>
+      <li><a href="/locations.html">Locations</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<main class="SkillPage SkillPage--app">
+  <header class="SkillPage__header">
+    <h1 class="SkillPage__title title-1">App design</h1>
 
-  Eyecam
-  Product that lets you edit your favorite photos and videos at any time
+    <p class="SkillPage__description">
+      Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.
+    </p>
+  </header>
 
-  Faceit
-  Get to meet your favorite internet superstar with the faceit app
+  <section class="SkillPageProjects">
+    <h2 class="ReaderOnly">Recent projects</h2>
 
-  Todo
-  A todo app that features cloud sync with light and dark mode
+    <article class="SkillPageProjectCard">
+      <img src="assets/app-design/desktop/image-airfilter.jpg" alt="express website">
+      <div class="SkillPageProjectCard__content">
+        <h3 class="SkillPageProjectCard__name">Airfilter</h3>
+        <p class="SkillPageProjectCard__description">Solving the problem of poor indoor air quality by filtering the air</p>
+      </div>
+    </article>
+    <article class="SkillPageProjectCard">
+      <img src="assets/app-design/desktop/image-eyecam.jpg" alt="express website">
+      <div class="SkillPageProjectCard__content">
+        <h3 class="SkillPageProjectCard__name">Eyecam</h3>
+        <p class="SkillPageProjectCard__description">Product that lets you edit your favorite photos and videos at any time</p>
+      </div>
+    </article>
+    <article class="SkillPageProjectCard">
+      <img src="assets/app-design/desktop/image-faceit.jpg" alt="express website">
+      <div class="SkillPageProjectCard__content">
+        <h3 class="SkillPageProjectCard__name">Faceit</h3>
+        <p class="SkillPageProjectCard__description">Get to meet your favorite internet superstar with the faceit app</p>
+      </div>
+    </article>
+    <article class="SkillPageProjectCard">
+      <img src="assets/app-design/desktop/image-todo.jpg" alt="express website">
+      <div class="SkillPageProjectCard__content">
+        <h3 class="SkillPageProjectCard__name">Todo</h3>
+        <p class="SkillPageProjectCard__description">A todo app that features cloud sync with light and dark mode</p>
+      </div>
+    </article>
+    <article class="SkillPageProjectCard">
+      <img src="assets/app-design/desktop/image-loopstudios.jpg" alt="express website">
+      <div class="SkillPageProjectCard__content">
+        <h3 class="SkillPageProjectCard__name">Loopstudios</h3>
+        <p class="SkillPageProjectCard__description">A VR experience app made for Loopstudios</p>
+      </div>
+    </article>
+  </section>
 
-  Loopstudios
-  A VR experience app made for Loopstudios
+  <section class="SkillPageSkills">
+    <h2 class="ReaderOnly">Other skills</h2>
 
-  Web Design
-  View Projects
+    <section class="SkillPageOtherSkill web">
+      <h3 class="SkillPageOtherSkill__title title-2">Web Design</h3>
+      <a href="web-design.html" class="SkillPageOtherSkill__link">View Projects</a>
+    </section>
+    <section class="SkillPageOtherSkill app">
+      <h3 class="SkillPageOtherSkill__title title-2">App Design</h3>
+      <a href="app-design.html" class="SkillPageOtherSkill__link">View Projects</a>
+    </section>
+    <section class="SkillPageOtherSkill graphic">
+      <h3 class="SkillPageOtherSkill__title title-2">Graphic Design</h3>
+      <a href="graphic-design.html" class="SkillPageOtherSkill__link">View Projects</a>
+    </section>
+  </section>
 
-  Graphic Design
-  View Projects
+  <section class="ContactBlock">
+    <h2 class="ContactBlock__title title-1">Let’s talk about your project</h2>
 
-  Let’s talk about your project
-  Ready to take it to the next level? Contact us today and find out how our expertise can help
-  your business grow.
-  Get in touch
+    <p class="ContactBlock__text">
+      Ready to take it to the next level? Contact us today and find out how our expertise can help your business
+      grow.
+    </p>
 
-  Our company
-  Locations
-  Contact
+    <a href="contact.html" class="CallToAction ContactBlock__link">Get in touch</a>
+  </section>
+</main>
 
-  Designo Central Office
-  3886 Wellington Street
-  Toronto, Ontario M9C 3J5
+<footer class="Footer">
+  <div>
+    <nav aria-label="footer" class="Nav">
+      <ul class="NoBulletList">
+        <li>
+          <a href="/index.html" class="Logo">
+            <span class="ReaderOnly">Designo</span>
+          </a>
+        </li>
 
-  Contact Us (Central Office)
-  P : +1 253-863-8967
-  M : contact@designo.co
+        <li><a href="/about.html">Our Company</a></li>
+        <li><a href="/locations.html">Locations</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div>
+    <address>
+            <span>
+                Designo Central Office <br>
+                3886 Wellington Street <br>
+                Toronto, Ontario M9C 3J5
+            </span>
+      <span>
+                Contact Us (Central Office) <br>
+                P : +1 253-863-8967 <br>
+                M : contact@designo.co
+            </span>
+    </address>
+  </div>
+</footer>
 </body>
 </html>

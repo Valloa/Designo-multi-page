@@ -16,7 +16,15 @@ main {
 
 .SkillPage {
   display: grid;
-  gap: 10rem;
+  gap: 2.5rem;
+
+  @include mediaPhone {
+    gap: 5rem;
+  }
+
+  @include mediaTablet {
+    gap: 10rem;
+  }
 
   &--web {
     .web {
@@ -40,12 +48,17 @@ main {
     display: grid;
     place-items: center;
     gap: 1.5rem;
+    margin-inline: 1.5rem;
     padding-block: 4rem;
     padding-inline: 1.5rem;
     color: white;
     text-align: center;
     background: var(--peach) url('shared/desktop/bg-pattern-call-to-action.svg') no-repeat right center / 50rem auto;
     border-radius: 1rem;
+
+    @include mediaPhone {
+      margin-inline: 0;
+    }
   }
 
   &__title {
@@ -60,13 +73,40 @@ main {
   &Projects {
     display: grid;
     gap: 2rem 1.875rem;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    padding-inline: 1.5rem;
+
+    @include mediaPhone {
+      padding-inline: 0;
+    }
+
+    @include mediaMd {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mediaXl {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   &ProjectCard {
+    display: grid;
     background: #FDF3F0;
     border-radius: 1rem;
     overflow: hidden;
+
+    @include mediaMd {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include mediaXl {
+      grid-template-columns: unset;
+    }
+
+    img {
+      block-size: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
 
     &__content {
       display: grid;
@@ -88,12 +128,14 @@ main {
 
   &Skills {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
     gap: 1.875rem;
     grid-auto-rows: 15.5rem;
+    padding-inline: 1.5rem;
 
     @include mediaPhone {
       grid-auto-rows: 12.5rem;
+      padding-inline: 0;
     }
 
     @include mediaTablet {

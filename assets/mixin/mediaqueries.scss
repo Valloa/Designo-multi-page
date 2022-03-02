@@ -1,5 +1,6 @@
 //$sm: 31;
-//$md: 48;
+$md: 48;
+$xl: 72;
 $phone: 27;
 $tablet: 89.9;
 //$media1920: 120;
@@ -7,13 +8,25 @@ $tablet: 89.9;
 //$navigationSwitch: 70;
 
 @mixin mediaPhone {
-  @media screen and (min-width: #{$phone}em) {
+  @media screen and (min-width: #{$phone}rem) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (min-width: #{$md}rem) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  @media screen and (min-width: #{$xl}rem) {
     @content;
   }
 }
 
 @mixin mediaTablet {
-  @media screen and (min-width: #{$tablet}em) {
+  @media screen and (min-width: #{$tablet}rem) {
     @content;
   }
 }

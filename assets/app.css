@@ -49,7 +49,7 @@
     block-size: 9.75rem; }
     .Header .Nav ul {
       display: none; }
-      @media screen and (min-width: 89.9em) {
+      @media screen and (min-width: 89.9rem) {
         .Header .Nav ul {
           display: grid; } }
 
@@ -57,7 +57,7 @@
   grid-auto-flow: row;
   grid-template-columns: auto;
   place-items: center; }
-  @media screen and (min-width: 89.9em) {
+  @media screen and (min-width: 89.9rem) {
     .Footer .Nav ul {
       grid-auto-flow: column;
       grid-template-columns: 1fr auto auto auto;
@@ -113,7 +113,7 @@
     opacity: .5;
     font-weight: var(--fweight-bold);
     text-align: center; }
-    @media screen and (min-width: 89.9em) {
+    @media screen and (min-width: 89.9rem) {
       .Footer address {
         grid-template-columns: repeat(auto-fit, 22rem);
         max-inline-size: 50rem;
@@ -137,11 +137,11 @@
   color: var(--white);
   background: var(--peach) url("shared/desktop/bg-pattern-call-to-action.svg") no-repeat right center/auto 150%;
   border-radius: 1rem; }
-  @media screen and (min-width: 27em) {
+  @media screen and (min-width: 27rem) {
     .ContactBlock {
       margin-inline: 0;
       padding-inline: 2.5rem; } }
-  @media screen and (min-width: 89.9em) {
+  @media screen and (min-width: 89.9rem) {
     .ContactBlock {
       grid-template: 'title link' auto 'text link' auto / 1fr auto;
       padding-block: 4.5rem;
@@ -151,7 +151,7 @@
     max-inline-size: 20rem;
     margin: 0;
     text-align: center; }
-    @media screen and (min-width: 89.9em) {
+    @media screen and (min-width: 89.9rem) {
       .ContactBlock__title {
         text-align: unset; } }
   .ContactBlock__text {
@@ -159,7 +159,7 @@
     max-inline-size: 28.75rem;
     margin: 0;
     text-align: center; }
-    @media screen and (min-width: 89.9em) {
+    @media screen and (min-width: 89.9rem) {
       .ContactBlock__text {
         text-align: unset; } }
   .ContactBlock__link {
@@ -197,7 +197,7 @@
   --title-3: var(--fweight-medium) 1rem/1.3 var(--main-font);
   --colWidth: 69.5rem;
   scroll-behavior: smooth; }
-  @media screen and (min-width: 89.9em) {
+  @media screen and (min-width: 89.9rem) {
     :root {
       --title-1: var(--fweight-medium) 3rem/1 var(--main-font);
       --title-2: var(--fweight-medium) 2.5rem/1.2 var(--main-font);

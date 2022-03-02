@@ -2,16 +2,22 @@ main {
   inline-size: 100%;
   max-inline-size: var(--colWidth);
   margin-inline: auto; }
-  @media screen and (min-width: 27em) {
+  @media screen and (min-width: 27rem) {
     main {
       padding-inline: 1.5rem; } }
-  @media screen and (min-width: 89.9em) {
+  @media screen and (min-width: 89.9rem) {
     main {
       padding-inline: 2.5rem; } }
 
 .SkillPage {
   display: grid;
-  gap: 10rem; }
+  gap: 2.5rem; }
+  @media screen and (min-width: 27rem) {
+    .SkillPage {
+      gap: 5rem; } }
+  @media screen and (min-width: 89.9rem) {
+    .SkillPage {
+      gap: 10rem; } }
   .SkillPage--web .web {
     display: none; }
   .SkillPage--app .app {
@@ -22,12 +28,16 @@ main {
     display: grid;
     place-items: center;
     gap: 1.5rem;
+    margin-inline: 1.5rem;
     padding-block: 4rem;
     padding-inline: 1.5rem;
     color: white;
     text-align: center;
     background: var(--peach) url("shared/desktop/bg-pattern-call-to-action.svg") no-repeat right center/50rem auto;
     border-radius: 1rem; }
+    @media screen and (min-width: 27rem) {
+      .SkillPage__header {
+        margin-inline: 0; } }
   .SkillPage__title {
     margin: 0; }
   .SkillPage__description {
@@ -36,11 +46,31 @@ main {
   .SkillPageProjects {
     display: grid;
     gap: 2rem 1.875rem;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); }
+    padding-inline: 1.5rem; }
+    @media screen and (min-width: 27rem) {
+      .SkillPageProjects {
+        padding-inline: 0; } }
+    @media screen and (min-width: 48rem) {
+      .SkillPageProjects {
+        grid-template-columns: repeat(2, 1fr); } }
+    @media screen and (min-width: 72rem) {
+      .SkillPageProjects {
+        grid-template-columns: repeat(3, 1fr); } }
   .SkillPageProjectCard {
+    display: grid;
     background: #FDF3F0;
     border-radius: 1rem;
     overflow: hidden; }
+    @media screen and (min-width: 48rem) {
+      .SkillPageProjectCard {
+        grid-template-columns: 1fr 1fr; } }
+    @media screen and (min-width: 72rem) {
+      .SkillPageProjectCard {
+        grid-template-columns: unset; } }
+    .SkillPageProjectCard img {
+      block-size: 100%;
+      object-fit: cover;
+      object-position: center top; }
     .SkillPageProjectCard__content {
       display: grid;
       place-items: center;
@@ -54,13 +84,15 @@ main {
       margin: 0; }
   .SkillPageSkills {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(25rem, 100%), 1fr));
     gap: 1.875rem;
-    grid-auto-rows: 15.5rem; }
-    @media screen and (min-width: 27em) {
+    grid-auto-rows: 15.5rem;
+    padding-inline: 1.5rem; }
+    @media screen and (min-width: 27rem) {
       .SkillPageSkills {
-        grid-auto-rows: 12.5rem; } }
-    @media screen and (min-width: 89.9em) {
+        grid-auto-rows: 12.5rem;
+        padding-inline: 0; } }
+    @media screen and (min-width: 89.9rem) {
       .SkillPageSkills {
         grid-auto-rows: 19.25rem; } }
   .SkillPageOtherSkill {
